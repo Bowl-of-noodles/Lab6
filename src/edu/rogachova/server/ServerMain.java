@@ -60,7 +60,7 @@ public class ServerMain
         ExecutionService executionService = new ExecutionService(dataManager);
 
         AtomicBoolean exit = new AtomicBoolean(false);
-        getUserInputHandler(dataManager, exit).start();
+        getInputHandler(dataManager, exit).start();
 
         while (!exit.get()) {
             try (SocketChannel socketChannel = serverSocketChannel.accept()) {
@@ -88,7 +88,7 @@ public class ServerMain
         dataManager.save();
     }
 
-    private static Thread getUserInputHandler(DataManager dataManager, AtomicBoolean exit){
+    private static Thread getInputHandler(DataManager dataManager, AtomicBoolean exit){
         return new Thread(() -> {
             Scanner scanner = new Scanner(System.in);
 
