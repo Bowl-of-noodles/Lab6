@@ -6,7 +6,6 @@ import edu.rogachova.common.exceptions.WrongAmountOfArgumentsException;
 import edu.rogachova.common.net.CommandResult;
 import edu.rogachova.common.net.Request;
 import edu.rogachova.common.net.ResultStatus;
-import edu.rogachova.server.managers.CollectionManager;
 
 public class PrintDSCEndDateCommand implements Command
 {
